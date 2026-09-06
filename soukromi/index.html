@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ochrana osobních údajů | Krotitelé nábytku</title>
-  <meta name="description" content="Jak Krotitelé nábytku nakládají s osobními údaji z poptávek. Web nepoužívá cookies ani analytické nástroje.">
+  <meta name="description" content="Jak Krotitelé nábytku nakládají s osobními údaji z poptávek. Informace o dobrovolném měření návštěvnosti a nastavení cookies.">
 
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -59,8 +59,18 @@
         <h3>Komu je předáváme</h3>
         <p>Nikomu je neprodáváme ani nepředáváme k&nbsp;marketingu. Technicky nám pomáhají dvě služby: odeslání formuláře doručuje FormSubmit.co a náš e-mail běží u&nbsp;společnosti Google (Gmail).</p>
 
-        <h3>Cookies a měření</h3>
-        <p>Tyhle stránky nepoužívají žádné cookies, neměří návštěvnost a nenačítají reklamní ani analytické nástroje. Proto tu nenajdete cookie lištu — není co odklikávat.</p>
+        <h3 id="cookies">Cookies a měření návštěvnosti</h3>
+        <p>Google Analytics 4 načítáme pouze po vašem souhlasu. Pomáhá nám zjistit zdroj návštěvy, navštívené stránky a použití kontaktů nebo poptávkového formuláře. Souhlas je dobrovolný. Při odmítnutí funguje web i formulář bez omezení a analytiku nenačítáme.</p>
+        <p>Do vlastních analytických událostí neposíláme jméno, e-mail, telefon, text zprávy ani fotografie z formuláře. Zaznamenáváme pouze typ poptávky (například renovace nebo výkup), druh kontaktu a stránku. Analytika může zpracovávat také identifikátor prohlížeče, informace o zařízení a přibližnou geografickou oblast.</p>
+        <p>Poskytovatelem služby je Google Ireland Limited; při poskytování služby mohou být údaje zpracovávány také mimo Evropský hospodářský prostor, včetně USA, za podmínek a se zárukami popsanými společností Google. Podrobnosti najdete v <a href="https://policies.google.com/privacy">zásadách ochrany soukromí Google</a> a <a href="https://business.safety.google/adsprocessorterms/">podmínkách zpracování údajů</a>. Právním základem analytického zpracování je váš souhlas.</p>
+        <ul>
+          <li><strong>kn_consent_v1</strong>: nezbytná cookie, která si na 180 dní pamatuje přijetí nebo odmítnutí analytiky.</li>
+          <li><strong>_ga a _ga_*</strong>: analytické cookies Google pro rozlišení prohlížečů a návštěv. Na webu nastavujeme dobu platnosti nejvýše 180 dní.</li>
+          <li><strong>kn_form_pending</strong>: pouze po souhlasu krátkodobý záznam v úložišti dané karty prohlížeče. Obsahuje typ poptávky a čas odeslání, nikoli její obsah. Po návratu na děkovací stránku jej odstraníme; pro měření platí nejvýše 30 minut a zaniká zavřením karty.</li>
+        </ul>
+        <p>Souhlas můžete kdykoli odvolat přes tlačítko níže nebo v patičce. Analytiku zastavíme a její cookies na této doméně odstraníme. Odvolání nemění zákonnost předchozího zpracování a samo nemaže údaje již odeslané Googlu.</p>
+        <p id="cookie-status" role="status"></p>
+        <button type="button" class="btn" data-cookie-open>Změnit nastavení cookies</button>
 
         <h3>Vaše práva</h3>
         <p>Máte právo na přístup ke svým údajům, jejich opravu či výmaz, omezení zpracování a námitku. Stačí napsat na e-mail výše. Pokud byste měli pocit, že s&nbsp;údaji nakládáme špatně, můžete se obrátit na Úřad pro ochranu osobních údajů.</p>
@@ -78,7 +88,22 @@
       <span><a href="/">Zpátky na web</a></span>
     </div>
   </div>
+  <div class="wrap"><button type="button" class="cookie-settings" data-cookie-open>Nastavení cookies</button></div>
 </footer>
+
+
+<section id="cookie-panel" class="cookie-panel" aria-labelledby="cookie-heading" hidden>
+  <div class="wrap">
+    <h2 id="cookie-heading">Můžeme měřit návštěvnost?</h2>
+    <p>S vaším souhlasem použijeme Google Analytics a analytické cookies, abychom zjistili, odkud přicházíte a co vás na webu zajímá. Bez souhlasu analytiku nespustíme. Web i poptávka fungují stejně v obou případech. <a href="/soukromi/#cookies">Podrobnosti o cookies</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn" data-cookie-accept>Přijmout analytiku</button>
+      <button type="button" class="btn" data-cookie-reject>Odmítnout analytiku</button>
+    </div>
+    <p class="cookie-note">Volbu si zapamatujeme na 180 dní. Změnit ji můžete v patičce přes Nastavení cookies.</p>
+  </div>
+</section>
+<script src="/analytics.js" defer></script>
 
 </body>
 </html>
