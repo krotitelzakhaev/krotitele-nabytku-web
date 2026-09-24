@@ -53,6 +53,15 @@ renovace/vykup/koupe/hledani/ostatni. Přímé otevření děkovací stránky an
 její obnovení nevytváří další lead. Nejde o serverové ověření doručení e-mailu.
 Formulář je nadále nativně odesílán přes FormSubmit; analytika jej neblokuje.
 
+## Přímé odkazy na poptávku
+
+`/kontakt/?duvod=renovace#formular` otevře rovnou formulář s vybranou renovací.
+Další podporované důvody: `vykup`, `koupe`, `hledani`. Běžný odkaz `/kontakt/`
+nechává volbu na návštěvníkovi. U konkrétní nabídky přidejte `&kus=identifikator`;
+názvy pěti aktuálních kusů jsou v `poptavka.js`. Při přidání nové karty doplňte
+i její identifikátor do tohoto seznamu. Volba i zpráva zůstávají upravitelné.
+Předvyplnění funguje bez souhlasu s analytikou a neukládá žádné osobní údaje.
+
 V administraci GA4 ověřte tok dat po přijetí souhlasu, nastavte vlastní dimenze
 `lead_type` a `method` v rozsahu události a označte `generate_lead` za klíčovou
 událost. Doporučená retence uživatelských dat: 2 měsíce. Ponechte vypnuté

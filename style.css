@@ -219,6 +219,12 @@ a:hover { color: var(--petrolej-tmavy); }
 .btn--obrys:hover { background: rgba(255,255,255,0.08); color: var(--papir); transform: translateY(-2px); }
 
 .hero--nizky .btn { margin-top: 1.6rem; }
+.hero--nizky .hero-akce .btn { margin-top: 0; }
+.hero .hero-poznamka { font-size: 0.95rem; margin-top: 1rem; }
+.hero-poznamka a { color: inherit; }
+.kontakt-akce { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: 2rem; }
+#formular { scroll-margin-top: 1.5rem; }
+.kus-telo > .btn { align-self: flex-start; margin-top: 0.8rem; }
 
 /* ---------- Foto-náhrady (placeholdery)  ----------
    Než budete mít fotky, drží místo tyhle bloky.
