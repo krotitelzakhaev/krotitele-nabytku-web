@@ -122,7 +122,8 @@
         <input type="text" id="kontakt" name="Kontakt" required>
 
         <label for="fotky">Fotky (volitelné, celkem do 10 MB)</label>
-        <input type="file" id="fotky" name="Fotky" accept="image/*" multiple>
+        <input type="file" id="fotky" name="attachment" accept="image/*" aria-describedby="fotky-stav">
+        <p class="pozn" id="fotky-stav" role="status">Můžete přiložit jednu fotku. Více fotek pošlete e-mailem nebo přes WhatsApp.</p>
 
         <!-- Past na spamovací roboty — nechte tak, jak je. -->
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
@@ -180,6 +181,7 @@
   </div>
 </section>
 <script src="/poptavka.js" defer></script>
+<script src="/fotky.js" defer></script>
 <script src="/analytics.js" defer></script>
 
 </body>

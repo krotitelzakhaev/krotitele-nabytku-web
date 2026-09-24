@@ -62,6 +62,23 @@ názvy pěti aktuálních kusů jsou v `poptavka.js`. Při přidání nové kart
 i její identifikátor do tohoto seznamu. Volba i zpráva zůstávají upravitelné.
 Předvyplnění funguje bez souhlasu s analytikou a neukládá žádné osobní údaje.
 
+## Fotky ve formuláři
+
+`fotky.js` zachovává nativní odeslání přes FormSubmit a umožňuje výběr více
+fotek najednou. Při události `formdata` převádí přílohy na samostatná pole
+`attachment_1`, `attachment_2` atd.; neopakovat pro všechny soubory stejný název.
+Názvy souborů i ostatní pole formuláře zůstávají zachované. Prohlížeč kontroluje
+součet velikostí proti 10 000 000 bajtů, ukazuje počet a velikost a nadlimitní
+odeslání blokuje. Skript není závislý na analytice ani souhlasu s cookies.
+Bez JavaScriptu / podpory `formdata` zůstává jeden nativní vstup pro jednu fotku;
+bez JavaScriptu se kontrola limitu spoléhá na FormSubmit.
+
+Testy: `node --test tests/fotky.test.cjs`. Po změně služby ověřte i skutečný
+e-mail se dvěma různými fotkami — lokální test prokazuje obsah odesílaného
+formuláře, nikoliv doručení příloh poskytovatelem.
+
+## Nastavení analytiky
+
 V administraci GA4 ověřte tok dat po přijetí souhlasu, nastavte vlastní dimenze
 `lead_type` a `method` v rozsahu události a označte `generate_lead` za klíčovou
 událost. Doporučená retence uživatelských dat: 2 měsíce. Ponechte vypnuté
