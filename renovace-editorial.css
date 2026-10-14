@@ -1,0 +1,64 @@
+/* Rozšíření stránky renovací. Zápisník používá pouze společné style.css. */
+.renovace-hero { padding: 4rem 0; }
+.renovace-hero .wrap { grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 3.5rem; }
+.renovace-hero h1 { max-width: 12em; }
+.renovace-hero .hero-akce { gap: .7rem; }
+.renovace-hero .btn { padding: .8rem 1.05rem; }
+.renovace-vzkaz { background: var(--papir); color: var(--inkoust); padding: 2rem; border-top: 4px solid var(--mosaz); }
+.renovace-vzkaz .eyebrow { color: var(--petrolej); }
+.renovace-vzkaz h2 { font-size: 2rem; }
+.hero .renovace-vzkaz p { font-size: 1rem; color: var(--inkoust-tlumeny); }
+.renovace-podpis { display: block; margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid var(--pisek-tmavy); font-family: var(--pismo-titulky); font-size: 1.3rem; font-weight: 600; }
+.renovace-podpis small { display: block; font-family: var(--pismo-text); font-size: .83rem; font-weight: 400; color: var(--inkoust-tlumeny); margin-top: .25rem; }
+.renovace-sluzby { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.8rem; }
+.renovace-sluzby > div { border-top: 1px solid var(--pisek-tmavy); padding-top: 1rem; }
+.renovace-index { display: block; color: var(--petrolej); font-family: var(--pismo-titulky); font-size: 1.2rem; margin-bottom: .8rem; }
+.renovace-sluzby p, .renovace-tlumeny { color: var(--inkoust-tlumeny); }
+.renovace-sluzby p { font-size: 1rem; }
+.renovace-pristup { display: grid; grid-template-columns: 1fr 2fr; gap: 2.5rem; margin-top: 2.8rem; border-left: 4px solid var(--mosaz); padding: 1.2rem 1.6rem; background: var(--pisek); align-items: start; }
+.renovace-pristup h3 { margin: 0; font-size: 1.5rem; }
+.renovace-dvojice { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 4rem; align-items: start; }
+.renovace-dvojice h2 { max-width: 13em; }
+.renovace-dvojice > div > .btn { margin-top: .6rem; }
+.renovace-cenik { margin: 0; border-top: 2px solid var(--petrolej); }
+.renovace-cenik > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .8rem; padding: 1.25rem 0; border-bottom: 1px solid var(--pisek-tmavy); }
+.renovace-cenik dt { font-weight: 500; }
+.renovace-cenik small { font-weight: 400; color: var(--inkoust-tlumeny); font-size: .9rem; }
+.renovace-cenik dd { margin: 0; white-space: nowrap; font-family: var(--pismo-titulky); font-size: 1.45rem; font-weight: 600; color: var(--petrolej-tmavy); }
+.renovace-cenik-pozn { margin-top: 1.1rem; font-size: .94rem; color: var(--inkoust-tlumeny); }
+#ceny { scroll-margin-top: 2rem; }
+.renovace-postup { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; list-style: none; padding: 0; margin: 0; }
+.renovace-postup li { padding-top: 1.2rem; border-top: 1px solid var(--pisek-tmavy); }
+.renovace-postup .cislo { display: block; font-family: var(--pismo-titulky); color: var(--petrolej); font-size: 2.5rem; line-height: 1; margin-bottom: 1.2rem; }
+.renovace-postup p { font-size: 1rem; color: var(--inkoust-tlumeny); }
+.renovace-doprava { margin-top: 2.5rem; border-top: 1px solid var(--pisek-tmavy); padding-top: 2rem; display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
+.renovace-faq details { border-bottom: 1px solid var(--pisek-tmavy); }
+.renovace-faq details:first-child { border-top: 1px solid var(--pisek-tmavy); }
+.renovace-faq summary { font-family: var(--pismo-titulky); font-size: 1.3rem; font-weight: 500; padding: 1.1rem 0; cursor: pointer; }
+.renovace-faq details p { padding-bottom: 1.2rem; color: var(--inkoust-tlumeny); font-size: 1rem; }
+.renovace-vyzva .renovace-vyzva-kontakt { margin: 1rem 0 0; max-width: none; font-size: .96rem; }
+.renovace-vyzva-kontakt a { color: inherit; white-space: nowrap; }
+.renovace-cteni { margin-top: 2rem; border-bottom: 1px solid var(--pisek-tmavy); padding: 1rem 0 1.8rem; }
+.renovace-cteni .eyebrow { margin-bottom: .4rem; }
+.renovace-cteni > a { font-family: var(--pismo-titulky); font-size: 1.5rem; }
+
+@media (max-width: 960px) {
+  .renovace-hero .wrap { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 2rem; }
+  .renovace-vzkaz { padding: 1.5rem; }
+  .renovace-sluzby { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .renovace-dvojice { gap: 2.5rem; }
+}
+@media (max-width: 780px) {
+  .renovace-hero { padding: 2.5rem 0 3rem; }
+  .renovace-hero .wrap, .renovace-dvojice, .renovace-pristup, .renovace-doprava { grid-template-columns: 1fr; gap: 1.5rem; }
+  .renovace-hero h1 { max-width: 15em; }
+  .renovace-hero .eyebrow { font-size: .7rem; }
+  .renovace-vzkaz { margin-top: .5rem; }
+  .renovace-postup { grid-template-columns: 1fr; gap: 1.5rem; }
+  .renovace-postup .cislo { font-size: 2rem; margin-bottom: .8rem; }
+}
+@media (max-width: 480px) {
+  .renovace-hero .hero-akce { flex-direction: column; align-items: stretch; text-align: center; }
+  .renovace-sluzby { grid-template-columns: 1fr; gap: 1.5rem; }
+  .renovace-cenik > div { grid-template-columns: 1fr; gap: .25rem; }
+}

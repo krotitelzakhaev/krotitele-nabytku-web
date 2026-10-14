@@ -4,11 +4,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://krotitelenabytku.cz/</loc></url>
   <url><loc>https://krotitelenabytku.cz/nabytek/</loc></url>
-  <url><loc>https://krotitelenabytku.cz/renovace/</loc></url>
+  <url><loc>https://krotitelenabytku.cz/renovace/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://krotitelenabytku.cz/renovace/praha/</loc></url>
   <url><loc>https://krotitelenabytku.cz/vykup/</loc></url>
   <url><loc>https://krotitelenabytku.cz/kontakt/</loc></url>
-  <url><loc>https://krotitelenabytku.cz/zapisnik/</loc></url>
+  <url><loc>https://krotitelenabytku.cz/zapisnik/</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://krotitelenabytku.cz/zapisnik/renovace-stareho-nabytku/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://krotitelenabytku.cz/zapisnik/jak-poznat-smidka-od-cecka/</loc></url>
   <url><loc>https://krotitelenabytku.cz/zapisnik/stolek-pavouk/</loc></url>
   <url><loc>https://krotitelenabytku.cz/zapisnik/vyrobni-stitky/</loc></url>
