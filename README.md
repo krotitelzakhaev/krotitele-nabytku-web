@@ -49,14 +49,14 @@ Odvolání souhlasu smaže GA cookies a obnoví stránku bez analytiky.
 Vlastní události: `contact_click` (method), `view_renovation_click`,
 `lead_form_submit` (pokus o odeslání), `generate_lead` (návrat na děkovací
 stránku do 30 minut po odeslání v téže kartě). `lead_type` rozlišuje
-renovace/vykup/koupe/hledani/ostatni. Přímé otevření děkovací stránky ani
+renovace/louhovani/vykup/koupe/hledani/ostatni. Přímé otevření děkovací stránky ani
 její obnovení nevytváří další lead. Nejde o serverové ověření doručení e-mailu.
 Formulář je nadále nativně odesílán přes FormSubmit; analytika jej neblokuje.
 
 ## Přímé odkazy na poptávku
 
 `/kontakt/?duvod=renovace#formular` otevře rovnou formulář s vybranou renovací.
-Další podporované důvody: `vykup`, `koupe`, `hledani`. Běžný odkaz `/kontakt/`
+Další podporované důvody: `louhovani`, `vykup`, `koupe`, `hledani`. Běžný odkaz `/kontakt/`
 nechává volbu na návštěvníkovi. U konkrétní nabídky přidejte `&kus=identifikator`;
 názvy pěti aktuálních kusů jsou v `poptavka.js`. Při přidání nové karty doplňte
 i její identifikátor do tohoto seznamu. Volba i zpráva zůstávají upravitelné.
@@ -89,3 +89,11 @@ Tyto administrativní kroky nejsou provedeny samotným nasazením kódu.
 Stránka měří bez query stringů a fragmentů URL; referrer se omezuje na původ.
 Podporované utm_source: firmy.cz, firmy, google_business, google, instagram,
 facebook. Do analytiky se neposílá obsah ani kontaktní údaje z formuláře.
+
+## Zajištění louhování
+
+`/louhovani-nabytku/` nabízí zajištění služby ve specializované dílně, nikoliv vlastní louhárnu.
+`/kontakt/?duvod=louhovani#formular` předvolí Louhování nábytku a ukáže pokyny k fotkám.
+Události formuláře mají `lead_type: louhovani`; ostatní důvody se nemění.
+Cenu, dopravu a podmínky předání po vyschnutí domlouváme individuálně před zahájením práce.
+Zvýraznění a přepínání verzí přidává pouze místní review server; nejsou součástí webu.

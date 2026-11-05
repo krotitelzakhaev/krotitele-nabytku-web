@@ -7,6 +7,7 @@
 
   const reasons = new Map([
     ['renovace', 'Renovace vlastního nábytku'],
+    ['louhovani', 'Louhování nábytku'],
     ['vykup', 'Nabízím nábytek k výkupu nebo odvozu'],
     ['koupe', 'Chci koupit / rezervovat kus z nabídky'],
     ['hledani', 'Sháním konkrétní kus']
@@ -26,4 +27,15 @@
   if (params.get('duvod') === 'koupe' && reason.value === reasons.get('koupe') && piece && !message.value) {
     message.value = 'Dobrý den, mám zájem o ' + piece + '.\n\n';
   }
+  const strippingHelp = document.getElementById('louhovani-pokyny');
+  function updateHelp() {
+    if (!strippingHelp) return;
+    const stripping = reason.value === reasons.get('louhovani');
+    strippingHelp.hidden = !stripping;
+    if (stripping) message.setAttribute('aria-describedby', 'louhovani-pokyny');
+    else message.removeAttribute('aria-describedby');
+  }
+  reason.addEventListener('change', updateHelp);
+  window.addEventListener('pageshow', updateHelp);
+  updateHelp();
 })();

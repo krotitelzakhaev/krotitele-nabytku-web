@@ -34,6 +34,7 @@
     const field = document.getElementById('duvod');
     const types = {
       'Renovace vlastního nábytku': 'renovace',
+      'Louhování nábytku': 'louhovani',
       'Nabízím nábytek k výkupu nebo odvozu': 'vykup',
       'Chci koupit / rezervovat kus z nabídky': 'koupe',
       'Sháním konkrétní kus': 'hledani',
@@ -47,7 +48,7 @@
       const pending = JSON.parse(sessionStorage.getItem(PENDING));
       sessionStorage.removeItem(PENDING);
       if (pending && Date.now() - pending.time >= 0 && Date.now() - pending.time < 30 * 60 * 1000 &&
-          ['renovace', 'vykup', 'koupe', 'hledani', 'ostatni'].includes(pending.type)) {
+          ['renovace', 'louhovani', 'vykup', 'koupe', 'hledani', 'ostatni'].includes(pending.type)) {
         emit('generate_lead', { lead_type: pending.type, method: 'form' });
       }
     } catch (_) { /* A direct visit or unavailable storage is not a lead. */ }
