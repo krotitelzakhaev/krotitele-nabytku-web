@@ -14,6 +14,8 @@
   ]);
   const pieces = new Map([
     ['kropacek-kozelka-set', 'pár křesel Kropáček & Koželka + stolek Pavouk (set)'],
+    ['kropacek-kozelka-kresla', 'pár křesel Kropáček & Koželka po renovaci'],
+    ['stolek-pavouk', 'stolek Pavouk se šelakovou politurou'],
     ['cecko-pavouk-set', 'pár křesel Céčko + stolek Pavouk (set)'],
     ['smidek-par', 'pár křesel Jaroslav Šmídek (TON) — šedozelený potah'],
     ['cecko-cihlovy-par', 'pár křesel Céčko — cihlový vzor'],

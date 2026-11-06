@@ -1,0 +1,55 @@
+/* Product pages and the finished-stock section. Existing site typography is shared. */
+.kusy--hotove { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kus--hotovy > a { background: var(--pisek); }
+.kus--hotovy .foto { aspect-ratio: 4 / 3; object-fit: contain; border: 0; }
+.kus--hotovy h3 a { text-decoration: none; }
+.kus--hotovy .badge { align-self: flex-start; margin-bottom: .6rem; }
+.kus--hotovy .kus-telo { padding: 1.3rem; }
+.kus--hotovy .kus-cena { margin-top: auto; padding-top: .7rem; }
+.produkt { padding-bottom: 1rem; }
+.produkt-drobecky { padding: 1.6rem 0; font-size: .88rem; }
+.produkt-uvod { display: grid; grid-template-columns: 1.12fr 1fr; gap: 2.8rem; align-items: start; padding: .8rem 0 3.5rem; }
+.produkt-hero-foto { margin: 0; }
+.produkt-hero-foto img { width: 100%; height: auto; border-radius: 4px; }
+.produkt-hero-foto p { font-size: .82rem; color: var(--inkoust-tlumeny); margin-top: .7rem; }
+.produkt-shrnuti h1 { font-size: clamp(2rem, 3.6vw, 2.8rem); margin: .8rem 0 1rem; }
+.produkt-cena { font-size: 1.9rem; font-weight: 600; margin: 1.5rem 0; }
+.produkt-cena span { display: block; font-size: .9rem; font-weight: 400; color: var(--inkoust-tlumeny); }
+.produkt-kontakt { font-size: .9rem; margin-top: 1rem; }
+.produkt-podrobnosti { display: grid; grid-template-columns: 1.12fr 1fr; gap: 2.8rem; padding: 2.8rem 0; border-top: 1px solid var(--pisek-tmavy); }
+.produkt-podrobnosti h2 { font-size: 1.75rem; margin-top: 1.5rem; }
+.produkt-podrobnosti h2:first-child { margin-top: 0; }
+.produkt-podrobnosti aside { background: var(--pisek); padding: 1.8rem; border-radius: 4px; }
+.produkt-udaje { margin: 0 0 2rem; }
+.produkt-udaje div { padding: .8rem 0; border-bottom: 1px solid var(--pisek-tmavy); }
+.produkt-udaje dt { font-size: .85rem; color: var(--inkoust-tlumeny); }
+.produkt-udaje dd { margin: .2rem 0 0; font-weight: 600; }
+.produkt-galerie-sekce { padding: 2.5rem 0; scroll-margin-top: 2rem; }
+.produkt-galerie { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.5rem; }
+.produkt-galerie figure { margin: 0; }
+.produkt-galerie a { display: block; background: var(--pisek); border-radius: 4px; }
+.produkt-galerie img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.produkt-galerie figcaption { font-size: .82rem; line-height: 1.45; padding: .6rem 0; color: var(--inkoust-tlumeny); }
+.produkt-varianty { padding: 2rem; margin: 2rem 0; background: var(--pisek); }
+.produkt-varianty div { display: flex; gap: 1rem 2rem; flex-wrap: wrap; }
+.produkt-zajem { text-align: center; padding: 3rem 0 4rem; max-width: 650px; margin: auto; }
+.produkt-lightbox { width: min(1200px, 96vw); max-height: 95vh; border: 0; border-radius: 6px; padding: 1rem; background: #181a18; color: #fff; }
+.produkt-lightbox::backdrop { background: rgba(0,0,0,.86); }
+.lightbox-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.produkt-lightbox button { font: inherit; color: #fff; background: #343b36; border: 1px solid #66736a; padding: .5rem .9rem; cursor: pointer; border-radius: 4px; }
+.lightbox-obraz { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: .6rem; align-items: center; margin-top: 1rem; }
+.lightbox-obraz img { max-height: 73vh; width: 100%; object-fit: contain; }
+.lightbox-obraz button { font-size: 2rem; padding: .2rem .7rem; }
+.produkt-lightbox p { font-size: .85rem; text-align: center; margin: .8rem 0 0; }
+@media (max-width: 900px) { .kusy--hotove { grid-template-columns: 1fr 1fr; } .produkt-uvod,.produkt-podrobnosti { gap: 1.6rem; } }
+@media (max-width: 680px) {
+ .kusy--hotove,.produkt-uvod,.produkt-podrobnosti { grid-template-columns: 1fr; }
+ .produkt-uvod { gap: 1.2rem; padding-bottom: 2rem; }
+ .produkt-hero-foto p { display: none; }
+ .produkt-galerie { grid-template-columns: 1fr 1fr; gap: 1rem; }
+ .produkt-podrobnosti aside,.produkt-varianty { padding: 1.25rem; }
+ .produkt-varianty div { flex-direction: column; }
+ .produkt-lightbox { padding: .6rem; }
+ .lightbox-obraz { gap: .25rem; }
+ .lightbox-obraz button { padding: .2rem .45rem; }
+}

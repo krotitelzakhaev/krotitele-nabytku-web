@@ -58,7 +58,7 @@ Formulář je nadále nativně odesílán přes FormSubmit; analytika jej neblok
 `/kontakt/?duvod=renovace#formular` otevře rovnou formulář s vybranou renovací.
 Další podporované důvody: `louhovani`, `vykup`, `koupe`, `hledani`. Běžný odkaz `/kontakt/`
 nechává volbu na návštěvníkovi. U konkrétní nabídky přidejte `&kus=identifikator`;
-názvy pěti aktuálních kusů jsou v `poptavka.js`. Při přidání nové karty doplňte
+názvy sedmi aktuálních nabídek jsou v `poptavka.js`. Při přidání nové karty doplňte
 i její identifikátor do tohoto seznamu. Volba i zpráva zůstávají upravitelné.
 Předvyplnění funguje bez souhlasu s analytikou a neukládá žádné osobní údaje.
 
@@ -97,3 +97,7 @@ facebook. Do analytiky se neposílá obsah ani kontaktní údaje z formuláře.
 Události formuláře mají `lead_type: louhovani`; ostatní důvody se nemění.
 Cenu, dopravu a podmínky předání po vyschnutí domlouváme individuálně před zahájením práce.
 Zvýraznění a přepínání verzí přidává pouze místní review server; nejsou součástí webu.
+
+## Hotové kusy (listopad 2026)
+
+Detailní stránky v `nabytek/` mají galerie (`nabidka.js`), vlastní metadata a Product/Offer data. Styl je v `nabidka.css`. Hotová sestava, pár křesel a stolek představují **stejný fyzický sklad**, nikoli tři nezávislé položky. Po prodeji křesel aktualizovat pár i set; po prodeji stolku stolek i set; po prodeji setu všechny tři. Změnit kartu, detail a `offers.availability` (SoldOut), zachovat URL. Fotky mají nezměněnou kompozici; originály nejsou součástí webu.
