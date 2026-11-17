@@ -57,18 +57,21 @@
         <p>Po dobu vyřizování poptávky a přiměřenou dobu poté; účetní doklady po dobu stanovenou zákonem. Údaje z&nbsp;poptávek, které nikam nevedly, průběžně mažeme.</p>
 
         <h3>Komu je předáváme</h3>
-        <p>Nikomu je neprodáváme ani nepředáváme k&nbsp;marketingu. Technicky nám pomáhají dvě služby: odeslání formuláře doručuje FormSubmit.co a náš e-mail běží u&nbsp;společnosti Google (Gmail).</p>
+        <p>Údaje z vašich poptávek neprodáváme ani nepředáváme k&nbsp;marketingu. S jejich doručením nám pomáhají dvě služby: odeslání formuláře doručuje FormSubmit.co a náš e-mail běží u&nbsp;společnosti Google (Gmail).</p>
 
-        <h3 id="cookies">Cookies a měření návštěvnosti</h3>
-        <p>Google Analytics 4 načítáme pouze po vašem souhlasu. Pomáhá nám zjistit zdroj návštěvy, navštívené stránky a použití kontaktů nebo poptávkového formuláře. Souhlas je dobrovolný. Při odmítnutí funguje web i formulář bez omezení a analytiku nenačítáme.</p>
+        <h3 id="cookies">Cookies, návštěvnost a měření reklam</h3>
+        <p>Google Analytics 4 načítáme pouze po vašem souhlasu. Pomáhá nám zjistit zdroj návštěvy, navštívené stránky a použití kontaktů nebo poptávkového formuláře. Volba <strong>Jen analytiku</strong> povolí toto měření bez souhlasu se sdílením dat pro reklamní měření.</p>
+        <p>Volba <strong>Přijmout vše</strong> navíc povolí měření reklam: Google může spojit návštěvu a použití kontaktu či formuláře s kliknutím na reklamu a předat tyto údaje z Analytics do propojeného účtu Google Ads. K tomu slouží také identifikátory reklamních kliknutí a příslušné cookies. Personalizaci reklam ani remarketing tím nezapínáme. Kliknutí na e-mail nebo WhatsApp je pro nás měřený kontakt, nikoli potvrzení, že jste zprávu odeslali.</p>
+        <p>Obě možnosti jsou dobrovolné. Při volbě <strong>Odmítnout</strong> Google tag nenačítáme. Web, kontakty i formulář fungují bez omezení. Dřívější souhlas pouze s analytikou automaticky nerozšiřujeme na měření reklam.</p>
         <p>Do vlastních analytických událostí neposíláme jméno, e-mail, telefon, text zprávy ani fotografie z formuláře. Zaznamenáváme pouze typ poptávky (například renovace nebo výkup), druh kontaktu a stránku. Analytika může zpracovávat také identifikátor prohlížeče, informace o zařízení a přibližnou geografickou oblast.</p>
-        <p>Poskytovatelem služby je Google Ireland Limited; při poskytování služby mohou být údaje zpracovávány také mimo Evropský hospodářský prostor, včetně USA, za podmínek a se zárukami popsanými společností Google. Podrobnosti najdete v <a href="https://policies.google.com/privacy">zásadách ochrany soukromí Google</a> a <a href="https://business.safety.google/adsprocessorterms/">podmínkách zpracování údajů</a>. Právním základem analytického zpracování je váš souhlas.</p>
+        <p>Poskytovatelem služeb Google Analytics a Google Ads je Google Ireland Limited; při poskytování služby mohou být údaje zpracovávány také mimo Evropský hospodářský prostor, včetně USA, za podmínek a se zárukami popsanými společností Google. Podrobnosti najdete v <a href="https://policies.google.com/privacy">zásadách ochrany soukromí Google</a> a <a href="https://business.safety.google/adsprocessorterms/">podmínkách zpracování údajů</a>. Právním základem tohoto volitelného měření je váš souhlas.</p>
         <ul>
-          <li><strong>kn_consent_v1</strong>: nezbytná cookie, která si na 180 dní pamatuje přijetí nebo odmítnutí analytiky.</li>
+          <li><strong>kn_consent_v2</strong>: nezbytná cookie, která si na 180 dní pamatuje vaši volbu. Starší kn_consent_v1 používáme jen pro zachování dřívějšího souhlasu s analytikou nebo odmítnutí; při nové volbě ji odstraníme.</li>
           <li><strong>_ga a _ga_*</strong>: analytické cookies Google pro rozlišení prohlížečů a návštěv. Na webu nastavujeme dobu platnosti nejvýše 180 dní.</li>
+          <li><strong>_gcl_*</strong>: cookies Google, které se mohou při povoleném měření reklam použít k přiřazení návštěvy ke kliknutí na reklamu. <a href="https://business.safety.google/adscookies/">Přehled cookies Google pro reklamu</a> uvádí jejich účel a dobu platnosti.</li>
           <li><strong>kn_form_pending</strong>: pouze po souhlasu krátkodobý záznam v úložišti dané karty prohlížeče. Obsahuje typ poptávky a čas odeslání, nikoli její obsah. Po návratu na děkovací stránku jej odstraníme; pro měření platí nejvýše 30 minut a zaniká zavřením karty.</li>
         </ul>
-        <p>Souhlas můžete kdykoli odvolat přes tlačítko níže nebo v patičce. Analytiku zastavíme a její cookies na této doméně odstraníme. Odvolání nemění zákonnost předchozího zpracování a samo nemaže údaje již odeslané Googlu.</p>
+        <p>Souhlas můžete kdykoli změnit přes tlačítko níže nebo v patičce. Při omezení nebo odvolání souhlasu odstraníme cookies měření na této doméně a obnovíme stránku podle nové volby. Odvolání nemění zákonnost předchozího zpracování a samo nemaže údaje již odeslané Googlu.</p>
         <p id="cookie-status" role="status"></p>
         <button type="button" class="btn" data-cookie-open>Změnit nastavení cookies</button>
 
@@ -94,14 +97,15 @@
 
 <section id="cookie-panel" class="cookie-panel" aria-label="Nastavení cookies" hidden>
   <div class="wrap">
-    <p>Pomocí analytických cookies zjišťujeme, co vás na webu zajímá, abychom ho mohli zlepšovat. Použijeme je jen s vaším souhlasem. <a href="/soukromi/#cookies">Více o cookies</a>.</p>
+    <p>S vaším souhlasem pomocí Google Analytics měříme návštěvnost. Pokud povolíte i měření reklam, předáváme údaje o návštěvě a použití kontaktů do Google Ads, abychom věděli, které reklamy fungují. Vybrat můžete obojí, jen analytiku, nebo vše odmítnout. <a href="/soukromi/#cookies">Více o cookies</a>.</p>
     <div class="cookie-actions">
-      <button type="button" class="btn" data-cookie-accept>Přijmout</button>
+      <button type="button" class="btn" data-cookie-accept-all>Přijmout vše</button>
+      <button type="button" class="btn" data-cookie-analytics>Jen analytiku</button>
       <button type="button" class="btn" data-cookie-reject>Odmítnout</button>
     </div>
   </div>
 </section>
-<script src="/analytics.js" defer></script>
+<script src="/analytics.js?v=20261117" defer></script>
 
 </body>
 </html>

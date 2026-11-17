@@ -43,8 +43,13 @@ a mají canonical — Google se přelije sám.
 Barvy a písma jsou ve `style.css`; písma hostujeme lokálně.
 `analytics.js` zapíná GA4 `G-2W33CPWDF5` pouze na produkční doméně a po
 výslovném souhlasu. Před souhlasem se Google tag vůbec nenačítá (basic consent).
-Přijetí i odmítnutí platí 180 dní. Nastavení je dostupné v každé patičce.
-Odvolání souhlasu smaže GA cookies a obnoví stránku bez analytiky.
+Volby „Přijmout vše“ (analytika + reklamní měření), „Jen analytiku“ a „Odmítnout“
+ukládá `kn_consent_v2` na 180 dní. Nastavení je dostupné v každé patičce.
+Staré `kn_consent_v1=granted` platí pouze pro analytiku; nová lišta nabídne
+rozšířenou volbu. Staré odmítnutí respektujeme bez dalšího dotazu.
+Pouze „Přijmout vše“ povoluje `ad_storage` a `ad_user_data`; `ad_personalization`
+zůstává vždy denied. Změna běžícího měření smaže GA/_gcl cookies a obnoví stránku
+podle nové volby. Obsah staré lišty z cache nikdy neudělí reklamní souhlas.
 
 Vlastní události: `contact_click` (method), `view_renovation_click`,
 `lead_form_submit` (pokus o odeslání), `generate_lead` (návrat na děkovací
@@ -82,13 +87,24 @@ formuláře, nikoliv doručení příloh poskytovatelem.
 V administraci GA4 ověřte tok dat po přijetí souhlasu, nastavte vlastní dimenze
 `lead_type` a `method` v rozsahu události a označte `generate_lead` za klíčovou
 událost. Doporučená retence uživatelských dat: 2 měsíce. Ponechte vypnuté
-Google Signals a reklamní funkce; pro přehlednost vypněte automatické interakce
+Google Signals, personalizaci reklam a remarketing; pro přehlednost vypněte automatické interakce
 s formuláři, protože používáme vlastní rozlišení pokusu a návratu po odeslání.
 Tyto administrativní kroky nejsou provedeny samotným nasazením kódu.
 
-Stránka měří bez query stringů a fragmentů URL; referrer se omezuje na původ.
-Podporované utm_source: firmy.cz, firmy, google_business, google, instagram,
-facebook. Do analytiky se neposílá obsah ani kontaktní údaje z formuláře.
+`page_location` zachovává jen validované značky `utm_source`, `utm_medium`,
+`utm_campaign`, `utm_id`, `utm_content`, `utm_term`; po reklamním souhlasu také
+`gclid`, `gbraid`, `wbraid`. Nevynucovat `referral` pro google/seznam: respektujeme
+skutečné UTM médium (např. cpc) a automatické značkování Google Ads.
+Ostatní query parametry a fragmenty se zahazují; referrer se omezuje na původ.
+Do UTM patří názvy kampaní, nikdy údaje zákazníků. Do vlastních událostí se
+neposílá obsah ani kontaktní údaje z formuláře.
+
+Testy: `node --test tests/*.test.cjs` — souhlasy, přechod ze starých cookies,
+odvolání, přijetí po odmítnutí, kampaně Google/Seznam, kontakty a formulář.
+Testy používají falešný Google tag bez síťových požadavků. Živé kontaktní
+konverze v Ads jsou sekundární a bez hodnoty; kliknutí není potvrzená poptávka.
+Po nasazení kontrolovat reálný tok a diagnostiku souhlasu v GA4 (aktualizace
+oznámení může trvat 48–72 hodin); bez souhlasu data záměrně neměříme.
 
 ## Zajištění louhování
 
